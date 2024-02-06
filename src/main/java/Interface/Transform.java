@@ -2,7 +2,10 @@ package Interface;
 
 import Point.Point2d;
 
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class Transform implements Rotate, Translate{
     /** TODO
@@ -13,7 +16,14 @@ public class Transform implements Rotate, Translate{
      * @return rotated collection
      * */
     public Collection<Point2d> rotate(Collection<Point2d> coords, Double angle) {
-        return null;
+        Collection<Point2d> collectionRotated = new ArrayList<>();
+
+        for(Point2d point : coords ){
+            Point2d pointRotated = point.rotate(angle);
+            collectionRotated.add(pointRotated);
+        }
+
+        return collectionRotated;
     }
 
     /** TODO
@@ -23,6 +33,11 @@ public class Transform implements Rotate, Translate{
      * @return translated coords
      * */
     public Collection<Point2d> translate(Collection<Point2d> coords, Point2d translateVector) {
-        return null;
+        List<Point2d> collectionTranslated = new ArrayList<>();
+        for(Point2d point : coords){
+            Point2d pointTranslated = point.translate(translateVector);
+            collectionTranslated.add(translateVector);
+        }
+        return collectionTranslated;
     }
 }
