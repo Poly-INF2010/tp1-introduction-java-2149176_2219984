@@ -1,0 +1,10 @@
+Points	3/5
+Formes	5/5
+Lettres	1/5
+Qualité de code et Design	3/5
+Total	12/20
+
+
+-- les methodes statiques de PointOperator ne sont pas appelées dans point2d.java
+-- votre image générée ne contient rien 
+
